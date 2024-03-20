@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "JAY MO"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Jay"
+name                     : "Jay Mo"
 description              : "Welcome to my portfolio & blog"
 url                      : "https://Jay-Mo-99.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
