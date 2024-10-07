@@ -1,3 +1,21 @@
+---
+title: "Valid Parentheses"
+layout: single
+date: 2024-10-07
+categories: 
+  - LeetCode
+  - JavaScript
+tags: 
+  - Stack
+  - String
+  - Algorithms
+excerpt: "Solutions for the 'Valid Parentheses' problem using JavaScript and stacks."
+author_profile: true
+read_time: true
+share: true
+related: true
+toc: true
+---
 # #20. Valid Parentheses
 
 Difficulty: Easy
