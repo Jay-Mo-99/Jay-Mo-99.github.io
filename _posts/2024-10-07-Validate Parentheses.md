@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "The First Post"
+title:  "Validate Parentheses"
 categories: coding
-tags: [C#,blog]
+tags: [JavaScript,leetcode]
 ---
 
 # This is the first post for github blog
