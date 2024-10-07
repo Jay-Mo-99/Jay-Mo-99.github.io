@@ -1,11 +1,3 @@
----
-layout: single
-title:  "Validate Parentheses"
-categories: coding
-tags: [JavaScript,leetcode]
----
-
-
 # #20. Valid Parentheses
 
 Difficulty: Easy
