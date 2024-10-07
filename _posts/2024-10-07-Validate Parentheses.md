@@ -18,12 +18,12 @@ toc: true
 ---
 # #20. Valid Parentheses
 
-Difficulty: Easy
-Number: 1
-Optimization: No
-Review: October 7, 2024
-Select: Stack, String
-Solve: No
+- **Difficulty**: Easy  
+- **Number**: 1  
+- **Optimization**: No  
+- **Review**: October 7, 2024  
+- **Select**: Stack, String  
+- **Solve**: No  
 
 # Validate Parentheses
 
@@ -113,15 +113,15 @@ var isValid = function(s) {
 };
 ```
 
-- Time: $O(n)$
+- Time: O(n)
     - The `for-of` loop iterates over each character `c` in the string `s`
     - Each `c` constant time opertion such as pop and push the stack are perfomed.
-    - Thus overall time complexity is $O(n),$ where n is length of the input string s
-- Space: $O(n)$
-    - The `stack` is depends on parameter string `s,` thus `$O(n)$`
+    - Thus overall time complexity is O(n), where n is length of the input string s
+- Space: O(n)
+    - The `stack` is depends on parameter string `s,` thus `O(n)`
     - The `mapping` object has a fixed size, unrelated to the input parameter, so it is $O(1)$
     - `Object.values(mapping)` retrieves the value of `mapping`, it always fixed and unrelated to the parameter, so $O(1)$
-    - Therefore, the overall space complexity is $O(n)$, where n is length of the input string s
+    - Therefore, the overall space complexity is O(n), where n is length of the input string s
 
 ## 2. Stack Only
 
