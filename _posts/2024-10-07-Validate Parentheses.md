@@ -4,11 +4,10 @@ layout: single
 date: 2024-10-07
 categories: 
   - LeetCode
-  - JavaScript
 tags: 
   - Stack
   - String
-  - Algorithms
+  - JavaScript
 excerpt: "Solutions for the 'Valid Parentheses' problem using JavaScript and stacks."
 author_profile: true
 read_time: true
