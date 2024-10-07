@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Jay Mo"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Leetcode challenges, study reflections, and my perspectives on coding"
+  bio              : "Leetcode, study notes, and my perspectives on coding"
   location         : "ON, Canada"
   email            :
   links:
