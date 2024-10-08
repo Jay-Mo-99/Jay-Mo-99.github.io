@@ -1,0 +1,152 @@
+---
+title: "Min Stack"
+layout: single
+date: 2024-10-08
+categories: 
+  - LeetCode
+tags: 
+  - Stack
+  - String
+  - JavaScript
+excerpt: "Solutions for the 'Min Stack' problem using JavaScript and stacks."
+author_profile: true
+read_time: true
+share: true
+related: true
+toc: true
+---
+# #115. Min Stack
+
+- **Difficulty**: Medium
+- **Number**: 1  
+- **Optimization**: No  
+- **Review**: October 8, 2024  
+- **Select**: Design, Stack
+- **Solve**: Yes
+- **Tried**: 1
+
+# My Answer
+
+```jsx
+let stack =[];
+var MinStack = function() {
+    stack = [];
+};
+
+/** 
+ * @param {number} val
+ * @return {void}
+ */
+MinStack.prototype.push = function(val) {
+    stack.push(val);
+};
+
+/**
+ * @return {void}
+ */
+MinStack.prototype.pop = function() {
+    stack.pop();
+};
+
+/**
+ * @return {number}
+ */
+MinStack.prototype.top = function() {
+    return stack[stack.length-1];
+};
+
+/**
+ * @return {number}
+ */
+MinStack.prototype.getMin = function() {
+    let order = [...stack];
+    order.sort((a,b)=>a-b);
+    return order[0]
+};
+
+/** 
+ * Your MinStack object will be instantiated and called as such:
+ * var obj = new MinStack()
+ * obj.push(val)
+ * obj.pop()
+ * var param_3 = obj.top()
+ * var param_4 = obj.getMin()
+ */
+```
+
+- Time: O(n)
+- Space: O(n)
+- Opinion: “You must implement a solution with `O(1)` time complexity for each function.”
+    
+    → For this rule, I have to edit the getMin() function. It depends on the length of stack 
+    
+
+# Reflection
+
+- [ ]  Exploring various solutions and clearly communicating them
+- [ ]  Stating the runtime and space complexity (the pros and cons) of each solution)
+- [ ]  Translating ideas into code
+- [ ]  Debugging your code
+
+# Best Answer
+
+- Save the ***Object*** “{value: x, min: y}” to array
+
+```jsx
+var MinStack = function() {
+  this.elements = [];
+  //The elements save the object type such as 
+  //[{value:3,min:3},{value:5,min:3},{value:100,min:3}]
+};
+
+/**
+
+ @param {number} x
+ @return {void}
+ */
+MinStack.prototype.push = function(x) {
+  this.elements.push({
+    value: x,
+    //If the element doesn't have any object, store x to min value
+    //If not, Use the Math.min(x,this.getMin()) for saving the minimum value 
+    min: this.elements.length === 0 ? x : Math.min(x, this.getMin()),
+  });
+};
+/**
+
+ @return {void}
+ */
+MinStack.prototype.pop = function() {
+  this.elements.pop();
+};
+/**
+
+ @return {number}
+ */
+MinStack.prototype.top = function() {
+  return this.elements[this.elements.length - 1].value;
+};
+/**
+
+ @return {number}
+ */
+MinStack.prototype.getMin = function() {
+  return this.elements[this.elements.length - 1].min;
+};
+```
+
+- Time: O(1)
+    - All methods in MinStack class perform their operations in constant time.
+    - Thus, Time complexity is O(1) because the size of the input(stack size) didn’t affect to methods in class.
+- Space: O(n)
+    - MinStack class stores all pushes elements and the corresponding minimum value at each time when the `push` method is called.
+    - For each element pushed in to stack, an object with two properties value and min is stored
+    - So, the space grows linearly with the number of elements.
+
+# Note
+
+- Why we have to use `this`
+    - We have to maintain the state of object after using `push, pop,` and `getMin`
+    - `this`  allows us to access and modify the properties of each instance.
+    - Without `this`, It would be unclear where to store the values, leading to potential error.
+    - By using `this`, we can store and maintain the values, especially when we handling several objects created by ‘MinStack’ Class.
