@@ -6,8 +6,8 @@ categories:
   - LeetCode
 tags: 
   - Stack
-  - String
   - JavaScript
+  - Design
 excerpt: "Solutions for the 'Min Stack' problem using JavaScript and stacks."
 author_profile: true
 read_time: true
@@ -15,16 +15,6 @@ share: true
 related: true
 toc: true
 ---
-# #115. Min Stack
-
-- **Difficulty**: Medium
-- **Number**: 1  
-- **Optimization**: No  
-- **Review**: October 8, 2024  
-- **Select**: Design, Stack
-- **Solve**: Yes
-- **Tried**: 1
-
 # My Answer
 
 ```jsx
