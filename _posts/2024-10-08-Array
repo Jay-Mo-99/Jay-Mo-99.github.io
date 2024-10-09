@@ -1,0 +1,183 @@
+---
+title: "Array"
+layout: single
+date: 2024-10-08
+categories: 
+  - Data Structure
+tags: 
+  - Algorithm
+  - Array
+excerpt: "Note for the 'Array' in data structure"
+author_profile: true
+read_time: true
+share: true
+related: true
+toc: true
+---
+# Arrays
+
+Tags: Algorithm, Data Structure
+ repeated: 1
+Post: Yes
+Presentation: Yes
+Review: October 8, 2024
+
+# Time Complexity of Array
+
+## What is the time complexity?
+
+- Measure how fast and how slow an operation of the data structure of the algorithm is.
+- Measure the steps that they take.
+
+# Memory
+
+- Non-volatile memory → The hard drive: Still save the memory turn off the computer
+- Volatile memory → The RAM(Random Access Memory): If you can’t save the memory turn off the computer
+- 
+- Reading data from RAM is faster than from a Hard Drive.
+    
+    ![image.png](image.png)
+    
+
+- Because RAM can access the data randomly
+    - RAM has several rooms and its memory address.
+    - If the user approaches this memory address, we can approach the value which address contains
+
+## Assign the array to RAM.
+
+![image.png](image%201.png)
+
+- Assign several boxes next to each other in the RAM.
+- The computer knows what the maximum length of the array is and ***where the memory started.***
+    - JS/Python is handling both of these  → Potential that slower speed than other language.
+
+# Operation of Array
+
+## Reading
+
+![image.png](image%202.png)
+
+- Approach the index(memory address) to read the value of that address.
+- For this Random access feature, it is best to read a lot of values.
+
+## Searching
+
+![image.png](image%203.png)
+
+![image.png](image%204.png)
+
+- ***Linear Search(선형검색)***
+    - Approach all the items on the array for search the specific value (Index 0 ~ Index length -1)
+- Spend a lot of time, Not that fast.
+
+## Insert(Add)
+
+![image.png](image%205.png)
+
+![image.png](image%206.png)
+
+- Best Scenario → Add the new item in the last address of the array → Fast.
+- So So case → Add the new item in the middle location of the array(We can know the index(address) → Middle Fast.
+    
+    ![image.png](image%207.png)
+    
+- Worst case
+    - Add thenew item at thebeginningn of the array
+        - Relocate all items to the next index, and create a new empty space for the new item.
+    - Already full
+        - The array has specific length, but we don’t have any space for adding a new item
+        - Create the new array copy ex element and paste them.
+        - Spend a lot of time
+
+## Delete
+
+- Best case
+    - Element the last element of the array → Fast
+- So So
+    - Delete the medium element of the array.
+    - Move forward next element in the array
+- Worst case
+    - Delete the first element of the array
+
+# Static Array vs Dynamic Array
+
+![image.png](image%208.png)
+
+## Static Array
+
+```c
+int array[5] = {1, 2, 3, 4, 5};
+```
+
+- **Fast:** Since access time is O(1), specific index values can be quickly referenced.
+- **Fixed Size:** Once the array size is set during initialization, it cannot be changed.
+    
+     This can lead to unnecessary memory usage or, a lack of memory.
+    
+- **Inefficient for Adding or Deleting Data:** Since the size is fixed
+- **When to Use:** Suitable when the number of elements is clearly defined and unlikely to change.
+
+## Dynamic Array
+
+```cpp
+std::vector<int> dynamicArray;
+```
+
+- 크기 변화 가능
+- 데이터 더하거나 빼기 가능
+- C++에서는 벡터, Java 는 Array List
+- 길이 고정 X, 데이터 추가 유리
+- 크기 변경시 성능 저하, 메모리 낭비가 심하다 → 크기를 확장할때 새로운 배열의 크기가 기존의 자동으로 두배로 커지기 때문에 오히려 낭비
+
+- **Resizable:** Allows for adding or deleting data, making it more flexible for array management.
+- **Easy to Add(Appending):** Adding data at the end of the dynamic array is O(1),
+- **Insert and Remove Data:**  but inserting or deleting in the middle may take O(n).
+- **Language-Specific Implementations:** For instance, C++ uses `std::vector`, and Java uses `ArrayList` for dynamic arrays.
+- **Memory Waste:** When expanding, the array size typically doubles automatically, which can result in unnecessary memory usage. This may also lead to performance degradation.
+
+# Stack
+
+### Abstract Data Type(ADT)
+
+- Type of the Data Structure, Just a behaviour this structure is, not existed code structure.
+- Stack and Queue
+
+### Definition
+
+![image.png](image%209.png)
+
+- Stack은 수직으로 쌓아올린 array
+- Last in First Out(LiFo), Such as the file of the Pan Cake
+- Only read, add and delete item to the top(Last element)
+
+### Usage: Recent Activity
+
+![image.png](image%2010.png)
+
+- Back Button in the website, Ctrl + Z
+    - Taking top of the information of the history stack
+
+### Operations
+
+- **push:** Adds a new element to the top of the stack. The time complexity is generally **O(1)**.
+- **pop:** Removes and returns the element from the top of the stack. This time complexity of **O(1)**.
+- **peek:** Checks what the top element of the stack. The time complexity is **O(1)**.
+
+### Advantages
+
+- Simple to implement
+- Good for backtracking: It is useful in scenarios like undo functions back and forward buttons, and other backtracking problems.
+- Memory management: In programming, stacks are used for function call management, where local variables and function states are stored in the call stack.
+- 장점: 간단해, 백 트래킹 문제 확인에 유리(뒤로가기 앞으로가기 이런거에도 유리), 메모리 관리에 유리
+- 단점:  데이터 접근에 제한이 있어, 중간에 있는 데이터 접근하려면 top element들을 싹 처리해줘야해, 다양한 데이터 처리에 어려움
+
+### Disadvantages
+
+- **Limited data access:** Since the stack follows a Last-In-First-Out (LIFO) order, accessing elements in the middle is not possible directly. To reach a specific element, you would have to pop all the elements above it.
+- **Not ideal for diverse data and ordered data handling:** In cases where order matters (like a queue) or frequent access to specific indices is needed, stacks are not suitable.
+
+# Reference
+
+[Array 배열 기초개념? 10분안에 정리해줌!](https://www.youtube.com/watch?v=NFETSCJON2M)
+
+[DATA STRUCTURES - How to work with arrays? (for beginners) - Arrays explained in 30 minutes!](https://www.youtube.com/watch?v=T76E09hnEuo)
