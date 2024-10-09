@@ -93,16 +93,6 @@ Review: October 9, 2024
 - Time Complexity: O(n)
     - Loop to traverse the list to find the pre, So it depends on the number of the node(n)
 
-- **목표 인덱스로 접근하기**:
-    - 먼저, 삭제할 노드의 이전 노드(`pre`)를 찾아야 합니다. 이를 위해 반복문을 사용하여 `pre`가 삭제할 노드의 바로 앞 노드에 도달하도록 합니다.
-    - 예를 들어, 인덱스 4의 노드를 삭제하려면 인덱스 3의 노드가 `pre`가 됩니다.
-- **링크 업데이트**:
-    - 삭제할 노드를 가리키는 포인터 (`del`)를 설정합니다. 예를 들어, `del = pre.next`로 설정합니다.
-    - 삭제할 노드의 다음 노드 (`aft`)를 가리키도록 포인터를 설정합니다. 예를 들어, `aft = del.next`로 설정합니다.
-    - `pre.next`를 `aft`로 설정하여 `del` 노드를 건너뛰도록 합니다. 이렇게 하면 삭제할 노드가 리스트에서 제거됩니다.
-- **노드 삭제**:
-    - 메모리에서 삭제할 노드를 해제합니다. 예를 들어, `delete del`을 통해 해당 노드를 삭제합니다.
-
 # Single Linked List
 
 - **Unidirectional:** We can only traverse the list in one direction, from the head to the tail
