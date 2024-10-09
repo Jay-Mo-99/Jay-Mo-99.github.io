@@ -1,5 +1,5 @@
 ---
-title: "Valid Parentheses"
+title: "⚡Valid Parentheses"
 layout: single
 date: 2024-10-07
 categories: LeetCode
