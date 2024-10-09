@@ -2,7 +2,7 @@
 title: "🚀 Linked List"
 layout: single
 date: 2024-10-09
-categories: Data-Structure
+categories: 🚀Data-Structure
 tags: 
   - Algorithm
   - Array
