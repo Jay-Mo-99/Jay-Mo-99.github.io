@@ -25,13 +25,6 @@ toc: true
 
 # #150. Evaluate Reverse Polish Notation
 
-Difficulty: Medium
-Optimization: Yes
-Review: October 9, 2024
-Select: Array, Math, Stack
-Solve: Yes
-Tried: 1
-
 # My Answer
 
 ```cpp
