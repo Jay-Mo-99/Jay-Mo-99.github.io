@@ -16,11 +16,10 @@ toc: true
 
 # Linked List
 
-Tags: Algorithm, Data Structure
- repeated: 1
-Post: Yes
-Presentation: No
-Review: October 9, 2024
+- **Number**: 1  
+- **Presentation**: Yes
+- **Review**: October 9, 2024  
+- **Select**: Algorithm, Data Structure
 
 # Difference of Array and Linked List on the Array
 
