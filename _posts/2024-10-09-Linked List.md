@@ -14,7 +14,7 @@ related: true
 toc: true
 ---
 
-# Linked List
+# #Linked List
 
 - **Number**: 1  
 - **Presentation**: Yes
