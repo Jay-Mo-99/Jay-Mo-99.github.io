@@ -2,7 +2,7 @@
 title: "🧩 Recursive Call"
 layout: single
 date: 2024-10-20
-categories: 🧩 Algorithm 
+categories: 🧩Algorithm 
 tags: 
   - Algorithm
 excerpt: "Description about the 'Recursive Call'"
