@@ -5,7 +5,7 @@ date: 2024-10-20
 categories: 🧩Algorithm 
 tags: 
   - Algorithm
-excerpt: "Description about the 'Recursive Call'"
+excerpt: "Note for the 'Recursive Call' in Algorithm"
 author_profile: true
 read_time: true
 share: true
