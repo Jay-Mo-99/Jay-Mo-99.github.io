@@ -13,6 +13,7 @@ share: true
 related: true
 toc: true
 ---
+
 # Linked List
 
 Tags: Algorithm, Data Structure
