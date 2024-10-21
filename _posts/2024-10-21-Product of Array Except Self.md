@@ -1,5 +1,5 @@
 ---
-title: "⚡ Product of Array Except Self"
+title: "⚡Product of Array Except Self"
 layout: single
 date: 2024-10-21
 categories: ⚡LeetCode
